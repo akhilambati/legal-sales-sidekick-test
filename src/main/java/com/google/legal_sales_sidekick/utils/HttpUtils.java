@@ -26,6 +26,7 @@ public class HttpUtils {
                     urlBuilder.append(queryParam.getKey()).append("=").append(queryParam.getValue());
                     urlBuilder.append("&");
                 }
+                urlBuilder.deleteCharAt(urlBuilder.length()-1);
                 url = urlBuilder.toString();
             }
             HttpRequest request = HttpRequest.newBuilder()
