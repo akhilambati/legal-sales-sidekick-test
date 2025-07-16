@@ -12,5 +12,5 @@ spring:
   flyway:
     enabled: true
 google:
-  client_id: '163163550532-fav9ts599hreo8kgkj4gtv23jbqv2q43.apps.googleusercontent.com'
-  client_secret: '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'
+  client_id: ''
+  client_secret: ''
