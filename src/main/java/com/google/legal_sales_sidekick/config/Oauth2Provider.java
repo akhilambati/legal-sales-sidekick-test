@@ -20,7 +20,7 @@ import java.util.Collections;
 @Component
 public class Oauth2Provider implements AuthenticationProvider {
 
-    @Value("${google.clientId}")
+    @Value("${google.client_id}")
     private String clientId;
 
     @Override

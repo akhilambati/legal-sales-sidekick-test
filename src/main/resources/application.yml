@@ -6,10 +6,11 @@ spring:
       ddl-auto: none
   datasource:
     url: jdbc:postgresql://localhost:5432/legal_sales
-    username: postgres
-    password: "akhil401"
+    username: akhil
+    password: "@Khil401"
     driver-class-name: org.postgresql.Driver
   flyway:
     enabled: true
 google:
-  clientId: '163163550532-fav9ts599hreo8kgkj4gtv23jbqv2q43.apps.googleusercontent.com'
+  client_id: '163163550532-fav9ts599hreo8kgkj4gtv23jbqv2q43.apps.googleusercontent.com'
+  client_secret: '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'

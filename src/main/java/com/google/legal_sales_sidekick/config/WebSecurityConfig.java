@@ -11,6 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import static com.google.legal_sales_sidekick.constants.constants.UNAUTHORIZED_PATHS;
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
@@ -26,7 +28,7 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeHttpRequests(authz -> authz
+        http.csrf().disable().authorizeHttpRequests(authz -> authz.requestMatchers(UNAUTHORIZED_PATHS).permitAll()
                 .anyRequest().authenticated()).addFilterBefore(legalAuthFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
