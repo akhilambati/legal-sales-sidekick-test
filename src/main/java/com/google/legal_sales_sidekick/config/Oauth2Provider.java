@@ -30,7 +30,7 @@ public class Oauth2Provider implements AuthenticationProvider {
             GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(
                     GoogleNetHttpTransport.newTrustedTransport(),
                     GsonFactory.getDefaultInstance())
-                    .setAudience(Collections.singletonList(clientId))
+                    //.setAudience(Collections.singletonList(clientId))
                     .build();
 
             GoogleIdToken idToken = verifier.verify(idTokenString);
